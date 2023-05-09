@@ -7,7 +7,7 @@ def create_rds_client():
 
     client = boto3.client('sts')
     assumed_role_object = client.assume_role(
-        RoleArn='arn:aws:iam::621641769616:role/rds_read',
+        RoleArn='arn:role/rds_read',
         RoleSessionName='rds_read',
     )
     credentials = assumed_role_object['Credentials']
