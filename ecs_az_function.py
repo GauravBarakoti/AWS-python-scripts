@@ -5,8 +5,8 @@ def client():
     # Set up the ECS client
     client = boto3.client('sts')
     assumed_role_object = client.assume_role(
-        RoleArn='arn:aws:iam::621641769616:role/rds_read',
-        RoleSessionName='rds_read',
+        RoleArn='',
+        RoleSessionName='',
     )
     credentials = assumed_role_object['Credentials']
     ecs = boto3.client(
