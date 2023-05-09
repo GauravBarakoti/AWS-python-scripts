@@ -9,7 +9,7 @@ def client():
     # return rds_ob
     client = boto3.client('sts')
     assumed_role_object = client.assume_role(
-        RoleArn='arn:aws:iam::977893653678:role/ec2-readonly',
+        RoleArn='arn:role/ec2-readonly',
         RoleSessionName='ec2-readonly',
     )
     credentials = assumed_role_object['Credentials']
